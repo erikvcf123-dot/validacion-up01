@@ -1,0 +1,7 @@
+name: Biblioteca API
+
+nav:
+  - Inicio: index.md
+  - Instalacion: instalacion.md
+  - Informacion: uso.md
+

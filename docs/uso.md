@@ -7,11 +7,13 @@ Endpoints disponibles
 Método | Ruta | Descripción
 GET | /api/libros | Lista de libros
 GET | /api/libros/:id | Libro por identificador
+GET | /api/libros/:autor| Lista libros por autor
 
 Ejemplos de consulta
 
 GET http://localhost:3000/api/libros
 GET http://localhost:3000/api/libros/1
 GET http://localhost:3000/api/libros/999
+GET http://localhost:3000/api/libros/AnaSoler 
 
 Si el libro no existe, el servidor devuelve HTTP 404.
