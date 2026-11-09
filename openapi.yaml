@@ -5,25 +5,34 @@ version: 1.0.0
 description: API para consultar un catálogo de libros
 
 paths:
-/api/libros:
-get:
-summary: Obtener todos los libros
-responses:
-'200':
-description: Lista de libros obtenida correctamente
-content:
-application/json:
-schema:
-type: array
-items:
-type: object
-properties:
-id:
-type: integer
-titulo:
-type: string
-autor:
-type: string
+  /api/libros:
+    get:
+      summary: Obtener todos los libros
+    responses:
+      '200':
+        description: Lista de libros obtenida correctamente
+  /api/libros/{id}:
+    get:
+      summary: Obtener el libro filtrado por su id
+    responses:
+      '200':
+        description: Libro obtenido correctamente.
+      '404':
+        description: Libro no encontrado.
+    content:
+      application/json:
+        schema:
+          type: array
+        items:
+          type: object
+        properties:
+          id:
+          type: integer
+          titulo:
+          type: string
+          autor:
+          type: string
+  
 
 # PENDIENTE: Documentar GET /api/libros/{id}
 # Incluir parametro id (path, requerido, entero) y respuestas 200 y 404.
